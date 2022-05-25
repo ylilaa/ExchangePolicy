@@ -31,8 +31,8 @@ oil = pd.read_csv('oil.csv')
 dfI['oil'] = oil
 
 # Calculate Output Gap from the industrial PPI using HP filter
-ppi = pd.read_csv('ppi.csv')
-cycle, trend = hpfilter(ppi,1600)
+ipi = pd.read_csv('ipi.csv')
+cycle, trend = hpfilter(ipi['ipi'],14400)
 dfI['OG'] = trend
 
 # M3 money supply from FastBull website
